@@ -74,11 +74,6 @@ LoopFillZerobss:
     cmp  r1, r2
     bcc  FillZerobss
 
-// Call the system init function
-.ifdef CALL_ARM_SYSTEM_INIT
-    bl   SystemInit
-.endif
-
 // Call the libc init function
     bl   __libc_init_array
 
